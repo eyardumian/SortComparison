@@ -9,7 +9,7 @@ import java.util.*;
  * the runnting times of InsertSort, QuickSort, and MergeSort. 
  *
  *Program 3 
- *@author Erika Yardumian - CPSC - 3273
+ *@author Erika Yardumian 
  *@version 4/11/19
  */
 
@@ -78,7 +78,7 @@ public class CollectDataThree {
       return i+1;  
    }
    
-    //Second part of Quicksort algorithm to sort array A.
+   //Second part of Quicksort algorithm to sort array A.
    static void sort(int A[], int low, int high) { 
      
       if (low < high) { 
@@ -102,7 +102,6 @@ public class CollectDataThree {
             A[j + 1] = A[j]; 
             j = j - 1; 
          }
-          
          A[j + 1] = key; 
       } 
    } 
@@ -126,7 +125,6 @@ public class CollectDataThree {
          G[i] = random.nextInt(maxvalue);
       }   
       for (n = 10; n < G.length + 1; n += 1000) { 
-      
          String SortingAlg[] = {"InsertSort", "QuickSort", "MergeSort"};
          for (String item: SortingAlg) {
          
@@ -161,7 +159,6 @@ public class CollectDataThree {
                sort(A, 0, n - 1);
             //End timing.
                long QuickEndTime = System.nanoTime();
-            
                long QuickExTime = QuickEndTime - QuickStartTime;
                QuickExecutionTime.add(QuickExTime);
                System.out.println(Arrays.toString(A));
@@ -182,7 +179,6 @@ public class CollectDataThree {
                MergeSort(A, 0, n - 1);
             //End timing.
                long endTime = System.nanoTime();
-            
                long MergeExTime = endTime - startTime;        
                //time.add(MergeTotalTime);
                MergeExecutionTime.add(MergeExTime);
@@ -192,7 +188,6 @@ public class CollectDataThree {
          }  
          size.add((long)n);
          counter++;
-       
       }
    
       File F = new File("Times.txt");
